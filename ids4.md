@@ -13,3 +13,5 @@ dotnet new --install Duende.IdentityServer.Templates
 5. Add Test Users
 
 6. Register an OIDC client
+
+7. The DefaultChallengeScheme is used when an unauthenticated user must log in. This begins the OpenID Connect protocol, redirecting the user to IdentityServer.
