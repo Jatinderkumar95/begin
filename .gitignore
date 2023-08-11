@@ -1,0 +1,12 @@
+**/.idea/**
+**/.vs/**
+**/bin
+**/obj
+**/.git
+  **/.svn
+  **/.vs
+  **/*.sln*
+  **/*.user
+  **/bin
+  **/obj
+  **/.idea
