@@ -34,3 +34,9 @@ To run multiple start up projects
             "configurations": [".NET Core Launch APP", ".NET Core Launch (web)"]
         }
     ]
+
+----------------------------------------
+
+To add new Razor 
+
+1. dotnet new page --name Listing  --namespace CarvedRock.WebApp.Pages --output Pages

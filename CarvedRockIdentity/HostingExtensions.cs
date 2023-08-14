@@ -1,3 +1,4 @@
+using Duende.IdentityServer.Models;
 using Serilog;
 
 namespace CarvedRockIdentity;
@@ -15,7 +16,7 @@ internal static class HostingExtensions
                 options.EmitStaticAudienceClaim = true;
             })
             .AddInMemoryIdentityResources(Config.IdentityResources)
-            .AddInMemoryApiScopes(Config.ApiScopes)
+            .AddInMemoryApiScopes(Config.ApiScopes).AddInMemoryApiResources(Config.ApiResources)
             .AddInMemoryClients(Config.Clients).AddTestUsers(TestUsers.Users);
         
         return builder.Build();

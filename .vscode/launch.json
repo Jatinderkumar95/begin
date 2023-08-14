@@ -22,7 +22,8 @@
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
-            }
+            },
+            "requireExactSource": false
         },
         {
             "name": ".NET Core Launch APP",
@@ -42,7 +43,8 @@
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
-            }
+            },
+            "requireExactSource": false
         },
         {
             "name": ".NET Core Launch (web)",
@@ -74,7 +76,8 @@
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
-            }
+            },
+            "requireExactSource": false
         },
         {
             "name": ".NET Core Attach",
