@@ -1,11 +1,14 @@
+using CarvedRock.Data.Entities;
 using CarvedRock.Domain;
 using CarvedRock.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarvedRock.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+// [Authorize]
 public class ProductController : ControllerBase
 {
     private readonly ILogger<ProductController> _logger;
@@ -18,7 +21,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IEnumerable<ProductModel>> Get(string category = "all")
+    public async Task<IEnumerable<Product>> Get(string category = "all")
     {
         _logger.LogInformation("Getting products from Get API for {x}",category);
         _logger.Log(LogLevel.Information,GetEvent,"Getting products from Get API for {x}",category);

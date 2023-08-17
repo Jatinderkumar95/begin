@@ -40,3 +40,29 @@ To run multiple start up projects
 To add new Razor 
 
 1. dotnet new page --name Listing  --namespace CarvedRock.WebApp.Pages --output Pages
+
+
+-------------------------------------------
+
+notion of request logging
+
+----------------------------------------------
+
+dotnet watch 
+
+dotnet new classlib  -o CarvedRock.Data --project CarvedRock.sln
+
+dotnet add reference ./CarvedRock.Data
+
+dotnet ef migrations add initial -o ./CarvedRock.Data/Migrations -p ./CarvedRock.Data/CarvedRock.Data.csproj -s ./CarvedRock.Api/CarvedRock.Api.csproj
+
+dotnet ef migrations remove -p ./CarvedRock.Data/CarvedRock.Data.csproj -s ./CarvedRock.Api/CarvedRock.Api.csproj
+-------------------------------------------------
+
+
+1. dotnet tool install --global dotnet-ef  OR 
+1.a dotnet new tool-manifest
+1.b dotnet tool install dotnet-ef --version 6.0.0
+1.c dotnet tool restore
+
+2. dotnet add package Microsoft.EntityFrameworkCore.Design
